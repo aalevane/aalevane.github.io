@@ -1,46 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artemis Levane</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>John Doe Photography</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <section id="top">
-        <h1>How To Make a Smoothie</h1>
-      <div>
-        <h2>A step-by-step guide</h2>
-        <ol>
-          <li><a href="#step1">Step 1: Gather Ingredients</a></li>
-          <li><a href="#step2">Step 2: Prepare Ingredients</a></li>
-          <li><a href="#step3">Step 3: Blend & Serve</a></li>
-        </ol>
+    <!--
+    Navigation
+    -->
+    <div class="hamburger-menu">
+      <ul class="hamburger-menu-list">
+       <li><a href="index.html">About</a></li>
+       <li><a href="work.html">Work</a></li>
+       <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div id="hamburger" class="hamburger-icon-wrapper">
+      <span class="hamburger-icon"></span>
+    </div>
+    <!--
+    Landing Page
+    -->
+    <div id="landing-page">
+      <div class="left">
+        <img class="animated fadeInLeftBig" src="mobile-lp-bg.jpg">
       </div>
-    </section>
-    <hr>
-    <section id="step1">
-      <h2>Step 1: Gather Ingredients</h2>
-      <h3>Gather your favorite fruits and vegetables</h3>
-      <img src="https://hd.unsplash.com/photo-1423483641154-5411ec9c0ddf">
+      <div class="right">
+        <header>
+          <div id="border"><h1>Hi I'm John Doe.</h1></div>
+          <h2>I take photos for a living.<br>I specialize in <span id="wedding">Wedding</span><br>& <span id="nature">Nature</span> Photography.</h2>
+        </header>
+      </div>
+    </div>
+    <script>
+    // Navigation
 
-      <section id="step2">
-      <h2>Step 2: Prepare Ingredients</h2>
-      <h3>Cut your fruits and/or vegetables and place them into your blender with milk or water</h3>
-      <img src="https://hd.unsplash.com/photo-1417217601328-d3c66e6f1d48">
+    document.getElementById('hamburger').addEventListener('click', checkNav);
+  window.addEventListener("keyup", function(e) {
+    if (e.keyCode == 27) closeNav();
+  }, false);
 
-        <section id="step3">
-      <h2>Step 3: Blend & Serve</h2>
-      <h3>Blend all of your ingredients until smooth and enjoy!</h3>
-      <img src="https://hd.unsplash.com/photo-1470604920216-560cf493b93b">
-    </section>
-     <section id="the-end">
-       <h3>For a free recipe and instructional video, check out YouTuber <a href="https://www.youtube.com/watch?v=wQHlOFPP_l4" target="_blank">iJustine</a>!</h3>
-       <h3>All photos courtesy of <a href="http://www.unsplash.com" target="_blank">Unsplash</a></h3>
-       <h1>Enjoy!</h1>
-       <a href="#top" id="button"><button type="button" class="btn btn-info btn-lg">Go Back To Top</button></a>
-     </section>
+  function checkNav() {
+    if (document.body.classList.contains('hamburger-active')) {
+      closeNav();
+    } else {
+      openNav();
+    }
+  }
+
+  function closeNav() {
+    document.body.classList.remove('hamburger-active');
+  }
+
+  function openNav() {
+    document.body.classList.add('hamburger-active');
+  }
+
+    </script>
   </body>
 </html>

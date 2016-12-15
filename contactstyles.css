@@ -1,0 +1,209 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Antonio;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+@font-face {
+    font-family: Antonio;
+    src: url(fonts/antonio-regular.ttf);
+}
+
+@font-face {
+  font-family: Antonio-Light;
+  src: url(fonts/antonio-light.ttf);
+}
+
+/* Navigation / Menu */
+
+.hamburger-icon-wrapper {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  height: 30px;
+  width: 35px;
+  cursor: pointer }
+
+.hamburger-icon, .hamburger-icon:before, .hamburger-icon:after {
+  content: '';
+  position: absolute;
+  border-radius: 1em;
+  height: 3px;
+  width: 30px;
+  background: black;
+  transition: all 0.2s ease }
+.hamburger-icon        { top: 0.75em  }
+.hamburger-icon:before { top: -0.55em }
+.hamburger-icon:after  { top: 0.55em  }
+.hamburger-active .hamburger-icon { background: transparent; transform: rotate(-135deg) }
+.hamburger-active .hamburger-icon:before, .hamburger-active .hamburger-icon:after { top: 0 }
+.hamburger-active .hamburger-icon:before { transform: rotate(90deg) }
+.hamburger-active .hamburger-icon, .hamburger-active .hamburger-icon:before, .hamburger-active .hamburger-icon:after {
+  background: white }
+
+.hamburger-menu {
+  transition: all 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.9);
+  color: white;
+  text-align: center }
+.hamburger-active .hamburger-menu {
+  opacity: 1;
+  pointer-events: initial; }
+.hamburger-menu-list {
+  display: block;
+  transition: all 0.4s ease;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2) }
+.hamburger-active .hamburger-menu-list {
+  transform: translate(-50%, -50%) scale(1)
+}
+
+.hamburger-menu-list {
+  margin-top: 6%;
+}
+
+.hamburger-menu-list li {
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1px 0px;
+}
+
+.hamburger-menu-list li a:link, a:visited, a:hover, a:active {
+  color: gold;
+  text-decoration: none;
+}
+
+#landing-page {
+  background-color: white;
+  height: 100%;
+  overflow: hidden;
+}
+
+.left {
+  width: 25%;
+  height: 100%;
+  overflow: hidden;
+  float: left;
+}
+
+#landing-page .left img {
+  height: 100%;
+}
+
+.right {
+  height: 100%;
+  width: 75%;
+  float: right;
+}
+
+form {
+  width: 85%;
+  margin: 40% auto;
+}
+
+header {
+  margin: 5% auto;
+}
+
+#border {
+  border-bottom: 4px solid #F5A623;
+}
+
+h1 {
+  text-align: right;
+  font-size: 35px;
+  margin-bottom: -2%;
+  font-weight: 100;
+}
+
+input {
+  border: 2px solid black;
+  padding: 2px 3px;
+  margin: 1px -1px;
+  float: right;
+  font-size: 18px;
+}
+
+input[name="message"]{
+  width: 94%;
+  height: 75px;
+}
+
+input[type="email"] {
+  width: 94%;
+}
+
+input[name="firstname"] {
+  width: 94%;
+}
+
+input[name="lastname"] {
+  width: 94%;
+}
+
+input[type="submit"] {
+  width: 75px;
+  font-family: Antonio-Light;
+  text-transform: uppercase;
+  background: black;
+  color: white;
+}
+
+@media only screen and (max-height: 274px) {
+  body {
+    overflow: scroll;
+  }
+  #landing-page {
+    overflow: scroll;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  h1 {
+    margin-bottom: -1%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .left {
+    width: 33.333%;
+  }
+  .right {
+    width: 66.666%;
+  }
+  h1 {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (min-width: 818px) {
+  form {
+    margin: 30% auto;
+  }
+}
+
+@media only screen and (min-width: 1110px) {
+  form {
+    margin: 28% auto;
+  }
+}
