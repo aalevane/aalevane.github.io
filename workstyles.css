@@ -179,9 +179,15 @@ button {
   #mobile-gallery {
     display: none;
   }
+  
+  .gallery {
+    width: 100% !important;
+  }
+  
   #gallery {
     display: block;
-    width: 100%;
+    width: 85%;
+    margin: 0 auto;
   }
   #gallery div {
     width: 70%;
@@ -189,7 +195,7 @@ button {
   }
   .gallery img {
     display: inline-block;
-    width: 28%;
+    width: 6%;
     margin: 1% 2%;
   }
 }
